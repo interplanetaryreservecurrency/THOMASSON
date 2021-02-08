@@ -1,7 +1,3 @@
-// Copyright (c) 2011-2016 The Cryptonote developers
-// Copyright (c) 2014-2016 SDN developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "gtest/gtest.h"
 
@@ -21,13 +17,13 @@ using CryptoNote::parameters::CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
   {
   protected:
 
-    block_reward_and_height() : 
+    block_reward_and_height() :
       m_currency(CurrencyBuilder(m_logger).currency()) {}
 
     void do_test(uint32_t height, uint64_t already_generated_coins = 0)
     {
       int64_t emissionChange;
-      m_block_not_too_big = m_currency.getBlockReward(median_block_size, current_block_size, 
+      m_block_not_too_big = m_currency.getBlockReward(median_block_size, current_block_size,
         already_generated_coins, 0, height, m_block_reward, emissionChange);
     }
 

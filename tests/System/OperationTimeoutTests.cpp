@@ -1,7 +1,3 @@
-// Copyright (c) 2011-2016 The Cryptonote developers
-// Copyright (c) 2014-2016 SDN developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <gtest/gtest.h>
 #include <System/OperationTimeout.h>
@@ -21,8 +17,8 @@ public:
 
 TEST_F(OperationTimeoutTest, DISABLED_timeoutHappens) {
   OperationTimeout<Timer> op(dispatcher, timer, std::chrono::milliseconds(100));
-  contextGroup.spawn([&] { 
-    EXPECT_THROW(timer.sleep(std::chrono::milliseconds(200)), InterruptedException); 
+  contextGroup.spawn([&] {
+    EXPECT_THROW(timer.sleep(std::chrono::milliseconds(200)), InterruptedException);
   });
   contextGroup.wait();
 }

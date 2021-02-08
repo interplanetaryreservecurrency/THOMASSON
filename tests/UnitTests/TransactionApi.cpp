@@ -1,7 +1,3 @@
-// Copyright (c) 2011-2016 The Cryptonote developers
-// Copyright (c) 2014-2016 SDN developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "gtest/gtest.h"
 
@@ -17,14 +13,14 @@
 using namespace CryptoNote;
 
 namespace {
- 
-  template <size_t size> 
+
+  template <size_t size>
   void fillRandomBytes(std::array<uint8_t, size>& data) {
     for (size_t i = 0; i < size; ++i) {
       data[i] = std::rand() % std::numeric_limits<uint8_t>::max();
     }
   }
-  
+
   template <typename Array>
   Array randomArray() {
     Array a;

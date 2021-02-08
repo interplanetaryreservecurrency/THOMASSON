@@ -1,7 +1,3 @@
-// Copyright (c) 2011-2016 The Cryptonote developers
-// Copyright (c) 2014-2016 SDN developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <System/Dispatcher.h>
 #include <System/ContextGroup.h>
@@ -23,7 +19,7 @@ public:
 };
 
 TEST_F(Ipv4ResolverTests, start) {
-  contextGroup.spawn([&] { 
+  contextGroup.spawn([&] {
     ASSERT_NO_THROW(Ipv4Resolver(dispatcher).resolve("localhost")); 
   });
   contextGroup.wait();

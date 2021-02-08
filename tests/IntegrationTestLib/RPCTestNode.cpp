@@ -1,7 +1,3 @@
-// Copyright (c) 2011-2016 The Cryptonote developers
-// Copyright (c) 2014-2016 SDN developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "RPCTestNode.h"
 
@@ -24,11 +20,11 @@ using namespace System;
 
 namespace Tests {
 
-RPCTestNode::RPCTestNode(uint16_t port, System::Dispatcher& d) : 
+RPCTestNode::RPCTestNode(uint16_t port, System::Dispatcher& d) :
   m_rpcPort(port), m_dispatcher(d), m_httpClient(d, "127.0.0.1", port) {
 }
 
-bool RPCTestNode::startMining(size_t threadsCount, const std::string& address) { 
+bool RPCTestNode::startMining(size_t threadsCount, const std::string& address) {
   LOG_DEBUG("startMining()");
 
   try {

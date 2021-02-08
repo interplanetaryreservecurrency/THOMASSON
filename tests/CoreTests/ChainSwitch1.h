@@ -1,9 +1,5 @@
-// Copyright (c) 2011-2016 The Cryptonote developers
-// Copyright (c) 2014-2016 SDN developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#pragma once 
+#pragma once
 #include "Chaingen.h"
 
 /************************************************************************/
@@ -11,7 +7,7 @@
 /************************************************************************/
 class gen_chain_switch_1 : public test_chain_unit_base
 {
-public: 
+public:
   gen_chain_switch_1();
 
   bool generate(std::vector<test_event_entry>& events) const;

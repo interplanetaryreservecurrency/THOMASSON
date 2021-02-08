@@ -1,9 +1,3 @@
-// Copyright (c) 2011-2016 The Cryptonote developers
-// Copyright (c) 2014-2016 SDN developers
-// Copyright (c) 2010-2017 Kohaku developers
-// Copyright (c) 2017 Wayang developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "gtest/gtest.h"
 #include <numeric>
@@ -25,10 +19,10 @@ using namespace CryptoNote;
 class PaymentGateTest : public testing::Test {
 public:
 
-  PaymentGateTest() : 
-    currency(CryptoNote::CurrencyBuilder(logger).currency()), 
+  PaymentGateTest() :
+    currency(CryptoNote::CurrencyBuilder(logger).currency()),
     generator(currency),
-    nodeStub(generator) 
+    nodeStub(generator)
   {}
 
   WalletConfiguration createWalletConfiguration(const std::string& walletFile = "pgwalleg.bin") const {

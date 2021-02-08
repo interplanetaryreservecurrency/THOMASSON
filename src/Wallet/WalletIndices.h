@@ -1,11 +1,3 @@
-// Copyright (c) 2011-2017 The Cryptonote developers
-// Copyright (c) 2014-2017 XDN developers
-// Copyright (c) 2016-2017 BXC developers
-// Copyright (c) 2017 Royalties developers
-// Copyright (c) 2010-2017 Kohaku developers
-// Copyright (c) 2017 Wayang developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #pragma once
 
@@ -14,7 +6,9 @@
 
 #include "ITransfersContainer.h"
 #include "IWallet.h"
-#include "IWalletLegacy.h" //TODO: make common types for all of our APIs (such as PublicKey, KeyPair, etc)
+#include "IWalletLegacy.h"
+
+//TODO: make common types for all of our APIs (such as PublicKey, KeyPair, etc)
 
 #include <boost/multi_index_container.hpp>
 #include <boost/multi_index/ordered_index.hpp>

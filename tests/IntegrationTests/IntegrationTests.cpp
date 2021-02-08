@@ -1,7 +1,3 @@
-// Copyright (c) 2011-2016 The Cryptonote developers
-// Copyright (c) 2014-2016 SDN developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "gtest/gtest.h"
 #include <Logging/LoggerRef.h>
@@ -20,10 +16,10 @@ extern Tests::Common::BaseFunctionalTestsConfig baseCfg;
 
 struct TotalWalletBalance {
 
-  TotalWalletBalance(uint64_t actual_ = 0, uint64_t pending_ = 0) 
+  TotalWalletBalance(uint64_t actual_ = 0, uint64_t pending_ = 0)
     : actual(actual_), pending(pending_) {}
 
-  TotalWalletBalance(IWalletLegacy& wallet) 
+  TotalWalletBalance(IWalletLegacy& wallet)
     : TotalWalletBalance(wallet.actualBalance(), wallet.pendingBalance()) {}
 
   uint64_t actual = 0;

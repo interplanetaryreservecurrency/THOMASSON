@@ -1,7 +1,3 @@
-// Copyright (c) 2011-2016 The Cryptonote developers
-// Copyright (c) 2014-2016 SDN developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "gtest/gtest.h"
 
@@ -17,7 +13,7 @@ using namespace CryptoNote;
 TEST(BinarySerializer, uint16) {
 
   std::stringstream ss;
-  
+
   uint16_t u16 = 0xfeff;
   uint32_t u32 = 0x3fddfd48;
 

@@ -1,7 +1,3 @@
-// Copyright (c) 2011-2016 The Cryptonote developers
-// Copyright (c) 2014-2016 SDN developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <System/Context.h>
 #include <System/Dispatcher.h>
@@ -14,8 +10,8 @@ using namespace System;
 
 TEST(ContextTests, getReturnsResult) {
   Dispatcher dispatcher;
-  Context<int> context(dispatcher, [&] { 
-    return 2; 
+  Context<int> context(dispatcher, [&] {
+    return 2;
   });
 
   ASSERT_EQ(2, context.get());
@@ -24,7 +20,7 @@ TEST(ContextTests, getReturnsResult) {
 TEST(ContextTests, getRethrowsException) {
   Dispatcher dispatcher;
   Context<> context(dispatcher, [&] {
-    throw std::string("Hi there!"); 
+    throw std::string("Hi there!");
   });
 
   ASSERT_THROW(context.get(), std::string);

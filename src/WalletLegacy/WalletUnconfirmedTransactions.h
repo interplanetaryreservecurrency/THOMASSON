@@ -1,9 +1,3 @@
-// Copyright (c) 2011-2017 The Cryptonote developers
-// Copyright (c) 2014-2017 XDN developers
-// Copyright (c) 2016-2017 BXC developers
-// Copyright (c) 2017 Royalties developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #pragma once
 
@@ -27,9 +21,9 @@ typedef std::pair<Crypto::PublicKey, size_t> TransactionOutputId;
 
 namespace std {
 
-template<> 
+template<>
 struct hash<CryptoNote::TransactionOutputId> {
-  size_t operator()(const CryptoNote::TransactionOutputId &_v) const {    
+  size_t operator()(const CryptoNote::TransactionOutputId &_v) const {
     return hash<Crypto::PublicKey>()(_v.first) ^ _v.second;
   } 
 }; 

@@ -1,20 +1,8 @@
 Release notes 0.1.0
 
-- Fork Royalties
+- Royal oraneum prime
 
 V0.1.1
 
-- Minor bug fixed
-
-V0.1.2
-
-- Fork Forknote
-
-V0.1.2 B1
-
-- Fixed bug on struct
-
-v0.1.2 B2
-
-- Fixed block explorer
-
+- oraneum_prime
+ 

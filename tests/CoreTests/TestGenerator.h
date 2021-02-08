@@ -1,9 +1,5 @@
-// Copyright (c) 2011-2016 The Cryptonote developers
-// Copyright (c) 2014-2016 SDN developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#pragma once 
+#pragma once
 
 #include "Chaingen.h"
 
@@ -22,7 +18,7 @@ public:
   }
 
   TestGenerator(
-    const CryptoNote::Currency& currency, 
+    const CryptoNote::Currency& currency,
     std::vector<test_event_entry>& eventsRef) :
       generator(currency),
       events(eventsRef) {

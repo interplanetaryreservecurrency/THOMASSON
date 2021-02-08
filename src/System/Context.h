@@ -1,9 +1,3 @@
-// Copyright (c) 2011-2017 The Cryptonote developers
-// Copyright (c) 2014-2017 XDN developers
-// Copyright (c) 2016-2017 BXC developers
-// Copyright (c) 2017 Royalties developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #pragma once
 
@@ -16,7 +10,7 @@ namespace System {
 template<typename ResultType = void>
 class Context {
 public:
-  Context(Dispatcher& dispatcher, std::function<ResultType()>&& target) : 
+  Context(Dispatcher& dispatcher, std::function<ResultType()>&& target) :
     dispatcher(dispatcher), target(std::move(target)), ready(dispatcher), bindingContext(dispatcher.getReusableContext()) {
     bindingContext.interrupted = false;
     bindingContext.groupNext = nullptr;

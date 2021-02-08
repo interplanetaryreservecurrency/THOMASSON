@@ -1,11 +1,3 @@
-// Copyright (c) 2011-2017 The Cryptonote developers
-// Copyright (c) 2014-2017 XDN developers
-// Copyright (c) 2016-2017 BXC developers
-// Copyright (c) 2017 Royalties developers
-// Copyright (c) 2010-2017 Kohaku developers
-// Copyright (c) 2017 Wayang developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "MemoryInputStream.h"
 #include <algorithm>
@@ -14,7 +6,7 @@
 
 namespace Common {
 
-MemoryInputStream::MemoryInputStream(const void* buffer, size_t bufferSize) : 
+MemoryInputStream::MemoryInputStream(const void* buffer, size_t bufferSize) :
 buffer(static_cast<const char*>(buffer)), bufferSize(bufferSize), position(0) {}
 
 size_t MemoryInputStream::getPosition() const {

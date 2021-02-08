@@ -4,7 +4,7 @@
  *
  *  This work is based on the implementation of
  *          Soeren S. Thomsen and Krystian Matusiewicz
- *          
+ *
  *
  */
 
@@ -22,7 +22,7 @@ const uint8_t indices_cyclic[15] = {0,1,2,3,4,5,6,7,0,1,2,3,4,5,6};
 #define ROTATE_COLUMN_DOWN(v1, v2, amount_bytes, temp_var) {temp_var = (v1<<(8*amount_bytes))|(v2>>(8*(4-amount_bytes))); \
 															v2 = (v2<<(8*amount_bytes))|(v1>>(8*(4-amount_bytes))); \
 															v1 = temp_var;}
-  
+
 
 #define COLUMN(x,y,i,c0,c1,c2,c3,c4,c5,c6,c7,tv1,tv2,tu,tl,t)				\
    tu = T[2*(uint32_t)x[4*c0+0]];			    \
